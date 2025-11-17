@@ -33,9 +33,9 @@ def recognize_gesture(finger_status):
     elif finger_status == [1,1,1,1,1]:
         return "Open Hand 🖐️"
     elif finger_status == [0,0,0,0,0]:
-        return "Fist ✊"
+        return "Thumbs up✊"
     elif finger_status == [1,0,0,0,0]:
-        return "Thumbs Up 👍"
+        return "Fist👍"
     else:
         return "Unknown"
 
