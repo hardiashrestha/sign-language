@@ -1,8 +1,6 @@
-Flask==3.1.2
-flask-cors==6.0.1
+Flask==3.0.0
+flask-cors==4.0.0
 opencv-python==4.8.1.78
 mediapipe==0.10.21
 numpy==1.26.4
-gunicorn==23.0.0
-Werkzeug==3.0.1
-Jinja2==3.1.6
+gunicorn==21.2.0
