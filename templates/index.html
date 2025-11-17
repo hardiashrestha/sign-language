@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Hand Gesture Recognition</h1>
+            <p class="subtitle">Real-time gesture detection powered by AI</p>
+        </header>
+
+        <main>
+            <div class="content-wrapper">
+                <div class="video-section">
+                    <div class="video-container">
+                        <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+                        <div class="overlay">
+                            <div class="gesture-display">
+                                <span id="gestureText">Initializing...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="info-section">
+                    <div class="info-card">
+                        <h2>Recognized Gestures</h2>
+                        <div class="gestures-list">
+                            <div class="gesture-item">
+                                <span class="gesture-icon">✌️</span>
+                                <span class="gesture-name">Peace</span>
+                            </div>
+                            <div class="gesture-item">
+                                <span class="gesture-icon">🖐️</span>
+                                <span class="gesture-name">Open Hand</span>
+                            </div>
+                            <div class="gesture-item">
+                                <span class="gesture-icon">✊</span>
+                                <span class="gesture-name">Thumbs Up</span>
+                            </div>
+                            <div class="gesture-item">
+                                <span class="gesture-icon">👍</span>
+                                <span class="gesture-name">Fist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card stats">
+                        <h2>Status</h2>
+                        <div class="status-item">
+                            <span class="status-label">Camera:</span>
+                            <span class="status-value active">✓ Connected</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Model:</span>
+                            <span class="status-value active">✓ Loaded</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Current Gesture:</span>
+                            <span class="status-value" id="statusGesture">None</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h2>Instructions</h2>
+                        <ul class="instructions">
+                            <li>Position your hand in front of the camera</li>
+                            <li>Make clear hand gestures</li>
+                            <li>Wait for recognition (real-time)</li>
+                            <li>Supported: Peace, Open Hand, Thumbs Up, Fist</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Hand Gesture Recognition. Built with Flask & MediaPipe</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
