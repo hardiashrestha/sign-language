@@ -8,12 +8,12 @@ import base64
 
 app = Flask(__name__)
 
-# Initialize MediaPipe
+
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
-hands = mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.7)
+hands = mp_hands.Hands(max_num_hands=5, min_detection_confidence=0.7)
 
-# Global variables for camera stream
+
 camera = None
 frame_lock = threading.Lock()
 current_frame = None

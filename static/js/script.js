@@ -5,16 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingSpinner = document.getElementById('loadingSpinner');
     const cameraStatus = document.getElementById('cameraStatus');
     
-    // Show loading spinner
-    loadingSpinner.classList.add('active');
     
-    // When video feed loads
+    loadingSpinner.classList.add('active');
+
     videoFeed.onload = function() {
         console.log('Video feed loaded');
         loadingSpinner.classList.remove('active');
     };
     
-    // Update gesture text every 500ms
+    
     const updateGesture = async () => {
         try {
             const response = await fetch('/api/gesture');
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Check health on page load
     fetch('/api/health')
         .then(response => response.json())
         .then(data => {
